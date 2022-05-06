@@ -1,0 +1,783 @@
+class A
+{
+	int x=100;
+	A()
+	{
+	}
+	public void finalize()
+	{
+		System.out.println("Object removed");
+	}
+}
+class Demo 
+{ 
+	public static void main(String args[])
+	{
+		A a=new A();
+		System.out.println(a.x);
+		a.x=1000;
+		System.out.println(a.x);
+		a=null
+		system.gc();
+	}
+}
+		
+######### INSTANCE AND STATIC METHOD
+
+class A
+{
+	static int a=15;
+	static void abc()
+	{
+		System.out.println("Static method");
+	}
+	int b=20;
+	void def()
+	{
+		System.out.println("instance method");
+	}
+}
+class Demo5
+{
+	public static void main(String args[])
+	{
+		A a=new A();
+		A.abc();
+		a.def();
+		System.out.println(A.a);
+		System.out.println(a.b);
+	}
+}
+
+
+
+################# EMPLOYEE PROJECT
+
+
+
+import java.util.Scanner;
+class Clerk
+{
+	int salary=15000;
+	String Desig="clerk";
+	void display()
+	{
+		Scanner sc=new Scanner(System.in);
+	      System.out.print("Enter ID:");
+		int id=sc.nextInt();
+		System.out.print("Enter Name:");
+		String name=sc.next();
+		System.out.print("Enter Age:");
+		int age=sc.nextInt();
+		System.out.println("ID is:"+id);
+		System.out.println("Name is:"+name);
+		System.out.println("Age  is:"+age);
+		System.out.println("Salary is:"+salary);
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Deve
+{
+	int salary=45000;
+	String Desig="Developer";
+	void display()
+	{
+		Scanner sc=new Scanner(System.in);
+	      System.out.print("Enter ID:");
+		int id=sc.nextInt();
+		System.out.print("Enter Name:");
+		String name=sc.next();
+		System.out.print("Enter Age:");
+		int age=sc.nextInt();
+		System.out.println("ID is:"+id);
+		System.out.println("Name is:"+name);
+		System.out.println("Age  is:"+age);
+		System.out.println("Salary is:"+salary);
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Tester
+{
+	int salary=25000;
+	String Desig="Tester";
+	void display()
+	{
+		Scanner sc=new Scanner(System.in);
+	      System.out.print("Enter ID:");
+		int id=sc.nextInt();
+		System.out.print("Enter Name:");
+		String name=sc.next();
+		System.out.print("Enter Age:");
+		int age=sc.nextInt();
+		System.out.println("ID is:"+id);
+		System.out.println("Name is:"+name);
+		System.out.println("Age  is:"+age);
+		System.out.println("Salary is:"+salary);
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Manager
+{
+	int salary=65000;
+	String Desig="Manager";
+	void display()
+	{
+		Scanner sc=new Scanner(System.in);
+	      System.out.print("Enter ID:");
+		int id=sc.nextInt();
+		System.out.print("Enter Name:");
+		String name=sc.next();
+		System.out.print("Enter Age:");
+		int age=sc.nextInt();
+		System.out.println("ID is:"+id);
+		System.out.println("Name is:"+name);
+		System.out.println("Age  is:"+age);
+		System.out.println("Salary is:"+salary);
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Demo5
+{
+	public static void main(String args[])
+	{
+		Clerk c=new Clerk();
+		Deve d=new Deve();
+		Tester t=new Tester();
+		Manager m = new Manager();
+   		System.out.println("1.Clerk\n 2.Developer\n 3.tester\n 4.Manager");
+		System.out.println("Choose your option,enter only digits from 1 to 4");
+            Scanner sc = new Scanner(System.in);
+		int num=sc.nextInt();
+		if (num==1)
+		{
+			c.display();
+		}
+		else if (num==2)
+		{
+			d.display();
+		}
+		else if (num==3)
+		{
+			t.display();
+		}
+		else if (num==4)
+		{
+			m.display();
+		}
+		else
+		{
+			System.out.println("Exit, Thank you");
+		}
+	}
+}
+
+		
+
+#########INHERITANCE EXAMPLE
+
+class A
+{
+	int a =100;
+	int b=200;
+	void m1()
+	{
+		System.out.println(a);
+	}
+	void m2()
+	{
+		System.out.println(b);
+	}
+}
+	
+class B 
+{
+	int c=300;
+	int d=400;
+	void m3()
+	{
+		System.out.println(a);
+	}
+	void m4()
+	{
+		System.out.println(b);
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		A a=new A();
+		B b=new B();
+		a.m1();
+		a.m2();
+		b.m1();
+		b.m2();
+		b.m3();
+		b.m4();
+	}
+}
+
+
+######### DEFAULT CONSTRUCTOR
+
+class A
+{
+	A()
+	{
+		System.out.println("Hii");
+	}
+	A( int a)
+	{
+		System.out.println("Hello 1");
+	}
+}
+	
+class B 
+{
+	B()
+	{
+		System.out.println("good morning");
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		A a=new A();
+		B b=new B();
+		
+	}
+}
+
+######### ASSIGNMENT
+
+1)Create
+        1)Clerk
+            Id , name , age
+            Salary , Desig
+        2)Dev
+        3)Programmer
+        4) Manager
+        5)Exit
+    2)Display
+    3)Raise Saly
+    4)Exit
+
+
+############ EMPLOYEE DETAILS USING INHERITANCE CONCEPT ####################################################
+
+
+
+import java.util.Scanner;
+class Emp
+{
+	String name;
+	String Desig;
+	Emp()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("name: ");
+		name=sc.next();
+		System.out.println("DEsignation: ");
+		Desig=sc.next();
+	}
+}
+class Clerk extends Emp
+{
+	
+	void display()
+	{
+		
+		System.out.println("Name is:"+name);
+		
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Deve extends Emp
+{
+	
+	void display()
+	{
+	
+		System.out.println("Name is:"+name);
+		
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Tester extends Emp
+{
+	
+	void display()
+	{
+		System.out.println("Name is:"+name);
+		
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class Manager extends Emp
+{
+	
+	void display()
+	{
+	
+		System.out.println("Name is:"+name);
+		
+		System.out.println("Designation is:"+Desig);
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		Clerk c=new Clerk();
+		Deve d=new Deve();
+		Tester t=new Tester();
+		Manager m = new Manager();
+   		c.display();
+		d.display();
+		t.display();
+		m.display();
+	
+	}
+}
+
+	
+
+################### THIS,SUPER KEYWORDS ################################################
+
+
+
+class A
+{	
+	int b=10;
+}
+class B extends A
+{
+	int b=100;
+	B(int b)
+	{
+		System.out.println("Parameter value : "+b);
+		System.out.println("inner class value: "+this.b);
+		System.out.println("Super class value: "+super.b);
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		B b=new B(1000);
+	}
+}
+		
+
+###################### CONSTRUCTOR OVERLOADING ##############################################
+
+
+class B
+{
+	B()
+	{
+		System.out.println("default constructor");
+	}
+	B(int a)
+	{
+		System.out.println("Parameterized constructor with 1 parameter");
+		System.out.println("Value of a is:"+a);
+	}
+	B(int ID,String name)
+	{
+		System.out.println("Parameterized constructor with 2 parameters");
+		System.out.println("ID is:"+ID+" and name is:"+name);
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		B b=new B();
+		B b1=new B(50);
+		B b2=new B(15,"Mounika");
+	}
+}
+		
+
+#################### METHOD OVERLOADING and METHOD OVERRIDING #################################
+
+
+class B
+{
+	B()
+	{
+		System.out.println("default constructor");
+	}
+	B(int a)
+	{
+		System.out.println("Parameterized constructor with 1 parameter");
+		System.out.println("Value of a is:"+a);
+	}
+	B(int ID,String name)
+	{
+		System.out.println("Parameterized constructor with 2 parameters");
+		System.out.println("ID is:"+ID+" and name is:"+name);
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		B b=new B();
+		B b1=new B(50);
+		B b2=new B(15,"Mounika");
+	}
+}
+		
+
+###################### final KEYWORD ########################################
+
+
+final class A
+{
+	final int c=100;
+	final void abc()
+	{
+		System.out.println("2%");
+	}
+	
+}
+class B extends A               // cannot override a final class
+{
+	void abc()                // cannot override a final method
+	{
+		System.out.println("3%");
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		
+		B b=new B();
+		System.out.println(b.c);
+		//b.c=500;  // cannot reassign a value to a final variable
+		System.out.println(b.c);
+		//b.abc(); 
+		
+	}
+}
+
+
+
+
+
+################### EMPLOYEE PROject( DAY-2) USING INHERITANCE,######################
+
+import java.util.Scanner;
+class emp
+{
+	String name;
+	int age;
+	emp()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter name :");
+		name=sc.next();
+		System.out.print("enter age :");
+		age=sc.nextInt();
+	}
+}
+class Clerk extends emp
+{
+	int salary=15000;
+	String desig="Clerk";
+	void display()
+	{
+		System.out.println("Name is :"+ name);
+		System.out.println("age is :"+ age);
+		System.out.println("salary is :"+ salary);
+		System.out.println("Designation is :"+ desig);
+	
+	}
+}
+class Deve extends emp
+{
+	int salary=55000;
+	String desig="Developer";
+	void display()
+	{
+		System.out.println("Name is :"+ name);
+		System.out.println("age is :"+ age);
+		System.out.println("salary is :"+ salary);
+		System.out.println("Designation is :"+ desig);
+	
+	}
+}
+class Tester extends emp
+{
+	int salary=35000;
+	String desig="Tester";
+	void display()
+	{
+		System.out.println("Name is :"+ name);
+		System.out.println("age is :"+ age);
+		System.out.println("salary is :"+ salary);
+		System.out.println("Designation is :"+ desig);
+	
+	}
+}
+class Manager extends emp
+{
+	int salary=85000;
+	String desig="Manager";
+	void display()
+	{
+		System.out.println("Name is :"+ name);
+		System.out.println("age is :"+ age);
+		System.out.println("salary is :"+ salary);
+		System.out.println("Designation is :"+ desig);
+	
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" 1.Create\n 2.Display\n 3.Exit\n ");
+		System.out.print("Enter your choice:");
+		int num=sc.nextInt();
+		
+		if(num==1)
+		{
+			
+			System.out.println("1.Clerk\n2.Developer\n3.Tester\n4.Manager\n5.Exit");
+			System.out.println("Enter your choice");
+			int opt=sc.nextInt();
+			
+			if(opt==1)
+			{
+				Clerk c=new Clerk();
+		
+				c.display();
+			}
+			else if (opt==2)
+			{
+				
+				Deve d=new Deve();
+				d.display();
+		
+			}
+			else if (opt==3)
+			{
+				
+				Tester t=new Tester();
+		
+				t.display();
+			}
+			else if (opt==4)
+			{
+				
+				Manager m =new Manager();
+				m.display();
+			}
+			else
+			{
+				System.out.println("Exit");
+			}
+		}
+		else if(num==2)
+		{
+			Clerk c=new Clerk();
+		
+			c.display();
+			Deve d=new Deve();
+			d.display();
+			Tester t=new Tester();
+			t.display();
+			Manager m =new Manager();
+			m.display();
+		
+		}
+		else
+		{
+			System.out.println("Exit and thank you");
+		}
+		
+	}
+}
+
+
+############## GET & SET METHODS -- ENCAPSULATION  ###############################
+
+class A
+{
+	
+	private int ID;
+	void setID(int ID)
+	{
+		this.ID=ID;
+		
+	}
+	int getID()
+	{
+		System.out.println("get method");
+		return ID;
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		A a= new A();
+		a.setID(16);
+		System.out.println(a.getID());
+	}
+}
+
+
+
+################# ABSTRACTION ###########################
+
+>>>>>>>>>>>> 1.Simple example 
+
+abstract class A
+{
+	abstract void loan();
+}
+class B extends A
+{
+	void loan()
+	{
+		System.out.println("hi abstraction");
+	}
+}
+class inherit 
+{
+	public static void main(String args[])
+	{
+		B a =new B();
+		a.loan();
+	}
+}
+
+>>>>>>>>>>>>> 2.Example using static methods and variables
+
+abstract class A
+{
+	static int x=15;
+	static void min()
+	{
+		System.out.println("Static method in abstract class");
+	}
+	abstract void abc();
+	abstract void add();
+	void sub()
+	{
+		System.out.println("Non abstract method in abstarct class");
+	}
+}
+abstract class b extends A
+{
+	void abc()
+	{
+		System.out.println("Abstract method in abstract class");
+	}
+	void add()
+	{
+		System.out.println("Abstract method in abstract class");
+	}
+	abstract void mul();
+}
+class c extends b
+{
+	void mul()
+	{
+		System.out.println("Abstract method in abstract class");
+	}
+}
+class inherit
+{
+	public static void main(String args[])
+	{
+		c o= new c();
+		System.out.println(A.x);             // accessing static variable from abstract class
+		A.min();                            //accessing static method from abstract class
+		o.sub();
+		o.abc();
+		o.add();
+		o.mul();
+	}
+}
+
+
+########### INTERFACE - Iimplements & extends keywords #####################################
+
+>>>>>>>>>>>> ex - 1
+
+interface i1
+{
+	int a=100;
+	void abc();
+	
+}
+interface i2 extends i1
+{
+	void x();
+	
+}
+class inherit 
+{	
+	public static void main(String args[])
+	{
+		//i1 a=new i1();                // cannot create object for interface
+		System.out.println(i1.a);
+	}
+}
+
+
+################# EXCEPTION HANDLING #########################
+
+import java.util.Scanner;
+class inh
+{
+	public static void main(String args[])
+	{
+		int a;
+		int b;
+		int res;
+		String name="10p0";                          // NumberFormatException
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a value: ");
+		a=sc.nextInt();
+		System.out.print("Enter b value: ");
+		b=sc.nextInt();
+		//res=a/b;                                   // ArithmeticException
+		//System.out.println(res);
+		int data = Integer.parseInt(name);
+		System.out.println(data);
+		//String myname=null;
+		//System.out.println(myname.length());         // NullPointerException
+		int arr[]=new int[3];
+		arr[0]=5;
+		arr[1]=14;
+		arr[2]=65;
+		//arr[3]=50;                                      // ArrayIndexOutOfBoundsException
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
